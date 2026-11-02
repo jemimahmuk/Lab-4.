@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red's Choice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mood-start">
+
+  <header>
+    <h1>&#129530; Red's Choice &#129530;</h1>
+    <p>Your choices decide how the story ends.</p>
+  </header>
+
+  <main>
+    <!-- Screen 1: ask for the player's name -->
+    <section id="name-screen">
+      <label for="name-input">What is your name?</label><br>
+      <input id="name-input" type="text" placeholder="Type your name" maxlength="20">
+      <br>
+      <button id="start-btn">Start the story</button>
+    </section>
+
+    <!-- Screen 2: the game (hidden until the name is entered) -->
+    <section id="game" class="hidden">
+      <div id="stats">
+        <span>Player: <b id="stat-name"></b></span>
+        <span>Kindness: <b id="stat-kindness"></b></span>
+        <span>Location: <b id="stat-path"></b></span>
+        <span>Endings found: <b id="stat-endings"></b></span>
+      </div>
+
+      <img id="scene-image" src="images/girl.svg" alt="">
+      <h2 id="scene-title"></h2>
+      <p id="scene-text"></p>
+
+      <!-- JavaScript adds the choice buttons here -->
+      <div id="choices"></div>
+
+      <button id="restart-btn" class="hidden">Play again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
